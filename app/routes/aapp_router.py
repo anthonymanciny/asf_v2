@@ -5,6 +5,7 @@ from app.routes.evento_router import evento_router
 from app.routes.instituicao_router import instituticao_router
 from app.routes.participacao_router import participacao_router
 from app.routes.pessoa_router import pessoa_router
+from app.routes.auth_router import auth_router
 
 # Criação de um roteador principal
 api_router = APIRouter()
@@ -16,3 +17,5 @@ api_router.include_router(evento_router)
 api_router.include_router(instituticao_router)
 api_router.include_router(participacao_router)
 api_router.include_router(pessoa_router)
+
+api_router.include_router(auth_router, prefix="/auth", tags=["Auth"])

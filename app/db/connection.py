@@ -13,6 +13,9 @@ PASSWORD = os.getenv("DB_PASSWORD", "")  # Senha do banco, padrão vazio
 DATABASE_NAME = os.getenv("DB_NAME")
 HOST = os.getenv("DB_HOST", "localhost")  # Host do banco, padrão localhost
 PORT = os.getenv("DB_PORT", "3306")  # Porta do banco, padrão 3306
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", 30))
 
 # Verificar se todas as variáveis foram carregadas corretamente
 if not USER or not DATABASE_NAME:

@@ -22,6 +22,13 @@ class PessoaCreate(PessoaBase):
 class PessoaUpdate(PessoaBase):
     pass
 
+class LoginSchema(BaseModel):
+    email: str
+    senha: str
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
 
 class PessoaResponse(PessoaBase):
     id_pessoa: int
